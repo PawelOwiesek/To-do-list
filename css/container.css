@@ -1,8 +1,6 @@
 .container {
-    justify-items: center;
-    max-width: 1000px;
     background-color: #ffffff;
-    padding:20px;
+    padding: 20px;
 }
 
 .container__title {
@@ -16,8 +14,9 @@
     grid-template-columns: 1fr auto;
     gap: 20px;
 }
-@media(max-width:767px){
-    .container__form{
+
+@media(max-width:767px) {
+    .container__form {
         grid-template-columns: 1fr;
     }
 }
@@ -29,14 +28,14 @@
 }
 
 .container__button {
-    align-self: center;
     background-color: teal;
     font-size: 20px;
     color: #ffffff;
     border: none;
     padding: 15px;
 }
-.container__button:hover{
+
+.container__button:hover {
     background-color: hsl(180, 100%, 35%);
-    
+
 }
