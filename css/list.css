@@ -31,6 +31,9 @@
     height: 30px;
     width: 30px; 
 }
+.tasks__list--buttonDone:hover{
+    background-color: hsl(120, 84%, 58%);
+}
 .tasks__list--buttonRemove{
     float: right;
     background-color: #e11313;
@@ -38,4 +41,10 @@
     height: 30px;
     width: 30px;
     margin: 10px 15px;
+}
+.tasks__list--buttonRemove:hover{
+    background-color: hsl(0, 84%, 58%);
+}
+.list__item--done{
+    text-decoration: line-through;
 }
