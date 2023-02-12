@@ -6,6 +6,7 @@
 - **JavaScript**
 - **BEM convention**
 ## 📃Demo
+https://pawelowiesek.github.io/To-do-list/
 ## ![mniejszy format](https://user-images.githubusercontent.com/121549413/213551880-c5e0cc16-8ffe-4718-8232-2b9073cbc2e7.jpg)
 ## 🎞Gif
 
