@@ -1,0 +1,42 @@
+.container {
+    justify-items: center;
+    max-width: 1000px;
+    background-color: #ffffff;
+    padding:20px;
+}
+
+.container__title {
+    margin: 0px 0 20px 0px;
+    border-bottom: 2px solid #e2dfdf;
+    padding: 20px
+}
+
+.container__form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+@media(max-width:767px){
+    .container__form{
+        grid-template-columns: 1fr;
+    }
+}
+
+.container__input {
+    border: 2px solid #e2dfdf;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.container__button {
+    align-self: center;
+    background-color: teal;
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+}
+.container__button:hover{
+    background-color: hsl(180, 100%, 35%);
+    
+}

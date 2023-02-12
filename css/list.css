@@ -1,0 +1,41 @@
+.tasks{
+    background-color: #ffffff;
+    margin-top: 10px;
+    max-width: 900px;
+    word-break: break-word;
+}
+.tasks__title{
+    margin: 0px 0 20px 0px;
+    border-bottom: 2px solid #e2dfdf;
+    padding: 20px;
+    font-size: 20px;
+}
+.tasks__list{
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 22px;
+}
+.tasksList__item{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid rgb(193, 193, 193);
+}
+.tasks__list--buttonDone{
+    margin: 10px 15px;
+    background-color: #13e113;
+    color: #ffffff;
+    height: 30px;
+    width: 30px; 
+}
+.tasks__list--buttonRemove{
+    float: right;
+    background-color: #e11313;
+    color: #ffffff;
+    height: 30px;
+    width: 30px;
+    margin: 10px 15px;
+}
