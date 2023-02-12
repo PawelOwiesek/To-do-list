@@ -7,7 +7,10 @@
 - **BEM convention**
 ## 📃Demo
 https://pawelowiesek.github.io/To-do-list/
-## ![mniejszy format](https://user-images.githubusercontent.com/121549413/213551880-c5e0cc16-8ffe-4718-8232-2b9073cbc2e7.jpg)
+## 
+![to do ](https://user-images.githubusercontent.com/121549413/218343092-1f42352e-3f6a-4672-ae48-cab776fbad0a.png)
+
 ## 🎞Gif
 
-## ![Animation](https://user-images.githubusercontent.com/121549413/213556224-f8a117dd-fde4-4654-8f50-0f4ab3aad5b6.gif)
+## 
+![To do list animation](https://user-images.githubusercontent.com/121549413/218342928-3e35c093-ae6e-4018-8afc-8748441ed889.gif)
