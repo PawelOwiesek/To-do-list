@@ -17,7 +17,6 @@
         flex-direction: column;
         text-align: center;
     };
-
 }
 
 .tasks__title {
@@ -40,9 +39,10 @@
     color: hsl(180, 100%, 55%);
 }
 
-.allDoneButton:disabled{
+.allDoneButton:disabled {
     color: #b9b8b8;
 }
+
 .tasks__list {
     margin: 0;
     padding: 0;
