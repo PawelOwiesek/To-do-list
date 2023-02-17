@@ -3,11 +3,27 @@
     margin-top: 10px;
     word-break: break-word;
 }
-
+.tasks__header{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    border-bottom: 2px solid rgb(193, 193, 193);;
+}
 .tasks__title {
-    border-bottom: 2px solid #e2dfdf;
-    padding: 20px;
+    margin-left: 20px;
     font-size: 20px;
+}
+.task__buttons{
+    margin: 20px;
+    background-color: #ffffff;
+    border:none;
+    color: #008080;
+    font-size: 18px;
+    align-items: end;
+    transition: 1s;
+}
+.task__buttons:hover{
+    cursor: pointer;
+    color: hsl(180, 100%, 55%);
 }
 
 .tasks__list {
