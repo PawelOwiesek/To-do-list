@@ -1,6 +1,7 @@
 {
   let tasks = [];
-
+  let hideDoneTasks=false;
+  
   const addNewTask = (newTaskContent) => {
     tasks = [
       ...tasks,
@@ -20,13 +21,19 @@
   const toggleTaskDone = (taskIndex) => {
     tasks = [
       ...tasks.slice(0, taskIndex),
-      { ...tasks[taskIndex], done: tasks[taskIndex].done = !tasks[taskIndex].done },
+      { ...tasks[taskIndex], done: !tasks[taskIndex].done },
       ...tasks.slice(taskIndex + 1),
     ]
 
     render();
   };
-
+  const markAllTasksDone=()=>{
+    tasks=tasks.map((task)=>({
+      ...task,
+      done:true
+    }));
+    render();
+  };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -56,9 +63,10 @@
         toggleTaskDone(index);
       });
     });
-  }
+  };
 
-  const render = () => {
+
+  const renderTasks = () => {
     let htmlString = "";
 
     for (const task of tasks) {
@@ -67,7 +75,7 @@
         <li
            class="tasksList__item "
         > 
-           <button class="tasks__list--buttonDone js-toggleDone">
+           <button class=" tasks__list--buttonDone js-toggleDone">
                 ${task.done ? "✔" : ""}
            </button>
            <span class= "${task.done ? "list__item--done" : ""}">
@@ -78,11 +86,41 @@
       `;
     }
     document.querySelector(".js-tasks").innerHTML = htmlString;
+  };
+
+  const bindButtonsEvents = () => {
+    const markAllDoneButton = document.querySelector(".js-markAllDoneButton");
+    const hideAllDoneButton = document.querySelector(".js-hideAllDoneButton");
+
+    if (tasks.length === 0) {
+      return;
+    };
+    markAllDoneButton.addEventListener("click",(markAllTasksDone))
+  };
+
+  const renderButtons = () => {
+    let buttonsElements = document.querySelector(".js-buttons");
+    buttonsElements.innerHTML === "";
+    if (!tasks.length) {
+      return;
+    };
+
+    buttonsElements.innerHTML = `
+      
+      <button class="task__buttons js-markAllDoneButton">Mark all done</button>
+      <button class="task__buttons js-hideAllDoneButton">Hide all done</button>
+      `
+
+
+  };
+
+  const render = () => {
+    renderTasks();
 
     bindRemoveEvents();
-
+    renderButtons();
     toggleDoneEvents();
-
+    bindButtonsEvents();
   };
 
   const init = () => {
