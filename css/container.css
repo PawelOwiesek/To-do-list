@@ -25,6 +25,7 @@
     border: 2px solid #e2dfdf;
     font-size: 22px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .container__button {
@@ -33,9 +34,11 @@
     color: #ffffff;
     border: none;
     padding: 15px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .container__button:hover {
     background-color: hsl(180, 100%, 35%);
-
+    transform: scale(1.1);
 }
