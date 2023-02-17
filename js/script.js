@@ -117,7 +117,7 @@
 
     buttonsElements.innerHTML = `
       
-      <button class="task__buttons js-markAllDoneButton"
+      <button class="task__buttons allDoneButton js-markAllDoneButton"
       ${tasks.every(({ done }) => done) ? "disabled" : ""}
       >
           Mark all done
