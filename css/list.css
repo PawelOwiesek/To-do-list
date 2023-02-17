@@ -69,3 +69,6 @@
 .list__item--done {
     text-decoration: line-through;
 }
+.tasks__item--hidden{
+    display:none;
+}
