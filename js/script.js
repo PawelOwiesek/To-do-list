@@ -3,18 +3,12 @@
   let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
-    tasks = [
-      ...tasks,
-      { content: newTaskContent, },
-    ];
+    tasks = [...tasks, { content: newTaskContent }];
     render();
   };
 
   const removeTask = (taskIndex) => {
-    tasks = [
-      ...tasks.slice(0, taskIndex),
-      ...tasks.slice(taskIndex + 1),
-    ];
+    tasks = [...tasks.slice(0, taskIndex), ...tasks.slice(taskIndex + 1)];
     render();
   };
 
@@ -49,7 +43,7 @@
     if (newTaskContent !== "") {
       addNewTask(newTaskContent);
       clear.value = "";
-    };
+    }
     clear.focus();
   };
 
@@ -71,7 +65,6 @@
     });
   };
 
-
   const renderTasks = () => {
     let htmlString = "";
 
@@ -79,7 +72,9 @@
       htmlString += `
           
         <li
-           class="tasksList__item ${task.done && hideDoneTasks ? "tasks__item--hidden" : ""} "
+           class="tasksList__item ${
+             task.done && hideDoneTasks ? "tasks__item--hidden" : ""
+           } "
         > 
            <button class=" tasks__list--buttonDone js-toggleDone">
                 ${task.done ? "✔" : ""}
@@ -90,7 +85,7 @@
            </button>
         </li>
       `;
-    };
+    }
     document.querySelector(".js-tasks").innerHTML = htmlString;
   };
 
@@ -100,11 +95,11 @@
 
     if (hideAllDoneButton) {
       hideAllDoneButton.addEventListener("click", toggleHideDoneTasks);
-    };
+    }
 
     if (markAllDoneButton) {
       markAllDoneButton.addEventListener("click", markAllTasksDone);
-    };
+    }
   };
 
   const renderButtons = () => {
@@ -113,7 +108,7 @@
     if (!tasks.length) {
       buttonsElements.innerHTML = "";
       return;
-    };
+    }
 
     buttonsElements.innerHTML = `
       
@@ -126,7 +121,7 @@
           ${hideDoneTasks ? "Show" : "Hide"}
           all done
        </button>
-      `
+      `;
   };
 
   const render = () => {
@@ -147,5 +142,4 @@
   };
 
   init();
-
 }
